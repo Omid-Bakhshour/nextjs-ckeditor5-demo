@@ -13,6 +13,7 @@
     "@ckeditor/ckeditor5-build-classic": "^40.2.0",
     "@ckeditor/ckeditor5-paragraph": "^40.2.0",
     "@ckeditor/ckeditor5-react": "^6.2.0",
+    "ckeditor5-custom-build": "file:src/ckeditor5",
     "next": "14.0.4",
     "raw-loader": "4",
     "react": "^18",

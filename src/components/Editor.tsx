@@ -1,16 +1,22 @@
 "use client"
 
 import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import CustomEditor from 'ckeditor5-custom-build'
 
 const editorConfiguration = {
+
   toolbar: [
-      'heading',
-      '|',
-      'bold','italic','link','bulletedList','numberedList',
-      '|',
-      'alignment:left', 'alignment:right', 'alignment:center', 'alignment:justify'
-      
+    'heading',
+    '|',
+    'bold', 'italic', 'link', 'bulletedList', 'numberedList',
+    '|',
+    'fontFamily',
+    'fontSize',
+    'fontColor',
+
+    '|',
+    'alignment:left', 'alignment:right', 'alignment:center', 'alignment:justify'
+
   ],
   heading: {
     options: [
@@ -29,7 +35,8 @@ export default function Editor() {
   return (
     <div className="w-full min-h-screen" >
       <CKEditor
-        editor={ClassicEditor}
+        editor={CustomEditor}
+        //@ts-ignore
         config={editorConfiguration}
         data="<p>Hello from CKEditor&nbsp;5!</p>"
         onChange={(event) => {
